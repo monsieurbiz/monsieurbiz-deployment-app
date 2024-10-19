@@ -3,14 +3,14 @@
 set -o errexit -o nounset -o xtrace
 
 function run_pre_build_hook() {
-  if [ -z "${PAGAIO_CC_PRE_BUILD_HOOK:-}" ]; then
+  if [ -z "${MONSIEURBIZ_CC_PRE_BUILD_HOOK:-}" ]; then
     return
   fi
-  bash -l -c ${PAGAIO_CC_PRE_BUILD_HOOK}
+  bash -l -c ${MONSIEURBIZ_CC_PRE_BUILD_HOOK}
 }
 
 function prepare_application() {
-  wget -q -O application.tgz "${PAGAIO_ARTIFACT_URL}"
+  wget -q -O application.tgz "${MONSIEURBIZ_ARTIFACT_URL}"
   tar xvzf application.tgz
   rm -f application.tgz
 }
