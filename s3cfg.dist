@@ -1,0 +1,5 @@
+[default]
+access_key = ${CELLAR_BACKUP_KEY_ID}
+secret_key = ${CELLAR_BACKUP_KEY_SECRET}
+host_base = ${CELLAR_BACKUP_HOST}
+host_bucket = %(bucket)s.${CELLAR_BACKUP_HOST}
